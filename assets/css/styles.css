@@ -3,7 +3,8 @@
 }
 
 :root {
-    --header-bg: #10375C
+    --header-bg: #10375C;
+    --primary-color: #2E80CE
 }
 
 html {
@@ -21,14 +22,37 @@ body {
     max-width: calc(100% - 48px);
     margin: 0 auto;
 }
+
 a {
     text-decoration: none;
+}
+
+.btn {
+    --height: 60px;
+    height: var(--height);
+    display: inline-block;
+    line-height: var(--height);
+    padding: 0 20px;
+    border-radius: 99px;
+    min-width: 205px;
+    text-align: center;
+    border: 1px solid var(--primary-color);
+    background: var(--primary-color);
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    cursor: pointer;
 }
 
 /* Header */
 .header {
     min-height: 100vh;
     background: var(--header-bg);
+    padding-top: 30px;
 }
 
 .logo {
@@ -75,4 +99,47 @@ a {
 .logo__brand--small {
     font-size: 1.2em;
     font-weight: 300;
+}
+
+/* Header top */
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar__list {
+    display: flex;
+}
+
+.action-login,
+.navbar__link {
+    padding: 4px 21px;
+    font-weight: 300;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    color: #C9D2DA
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+    color: #fff;
+    text-shadow: 1px 0 0 currentColor;
+}
+
+.navbar__link--active::before {
+    position: relative;
+    left: -8px;
+    top: -2px;
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #FFFFFF;
+}
+
+.action-signup {
+    --height: 44px;
+    min-width: 104px
 }
