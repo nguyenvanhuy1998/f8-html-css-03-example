@@ -540,7 +540,7 @@ a {
 }
 
 .install__inner {
-    background: #2E80CE;
+    background: var(--primary-color);
     border-radius: 4px;
     display: flex;
     justify-content: space-between;
